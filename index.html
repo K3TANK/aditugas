@@ -6,11 +6,12 @@
 
 </canvas>
 
-<h1>set timer</h1>
 <br>
-<h1>set 1</h1>
+<h1>set 1 </h1>
 <input type="text" id="text1" >
 <p id="text1_1"></p>
+
+
 <hr>
 <h1>set 2</h1>
 <input type="text" id="text2" >
@@ -95,19 +96,18 @@ function drawTime(ctx, radius){
     var x1 = document.getElementById("text1").value;
     var x2 = document.getElementById("text2").value;
     var x3 = document.getElementById("text3").value;
+    
     document.getElementById("text1_1").innerHTML = x1;
     document.getElementById("text1_2").innerHTML = x2;
     document.getElementById("text1_3").innerHTML = x3;
-    if(minute == x1){
-        firebase.database().ref().update({
-        'set1' : parseInt("1")
-        
-    });
-    }
     
+    
+    
+    
+  
     if(minute == x1){
         firebase.database().ref().update({
-        'set1' : parseInt('90')
+        'set1' : parseInt('180')
     });
     //const myTimeout = setTimeout(matikan, 5000);
     
@@ -116,13 +116,13 @@ function drawTime(ctx, radius){
     
     else if(minute == x2){
         firebase.database().ref().update({
-        'set1' : parseInt('90')
+        'set1' : parseInt('180')
     });
     
     }
     else if(minute == x3){
         firebase.database().ref().update({
-        'set1' : parseInt('90')
+        'set1' : parseInt('180')
     });
     
     }
